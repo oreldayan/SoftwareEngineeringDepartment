@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplicationNewPro.Models.StudentCoursesTests>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SubmitGradeOfTests</title>
+</head>
+<body>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.studentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gradeMoedA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gradeMoedB)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gradeMoedA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gradeMoedB)
+            </td>
+
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

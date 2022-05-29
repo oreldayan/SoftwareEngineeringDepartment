@@ -1,0 +1,45 @@
+﻿@model WebApplicationNewPro.Models.Course
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditCourseSchedule</title>
+</head>
+<body>
+    <div> 
+        <form action="SaveCourse" method="post">
+            Course Name: @Model.courseName @Html.HiddenFor(m => m.courseName)
+            <br />
+            Course ID:   @Model.courseID @Html.HiddenFor(m => m.courseID)
+            <br />
+            <br />
+            Enter Place course: @Html.TextBoxFor(p => p.placeCourse)
+            <br />
+            Enter Day: @Html.TextBoxFor(d => d.day)
+            <br />
+            Enter beginning Time: @Html.TextBoxFor(d => d.beginningTime)
+            <br />
+            <br />
+            Date moed A: @Model.dateMoedA @Html.HiddenFor(m => m.dateMoedA)
+            <br />
+            Date moed B: @Model.dateMoedB @Html.HiddenFor(m => m.dateMoedB)
+            <br />
+            place Moed A:@Model.placeMoedA @Html.HiddenFor(m => m.placeMoedA)
+            <br />
+            place Moed A: @Model.placeMoedB @Html.HiddenFor(m => m.placeMoedB)
+            <br />
+            lecturer ID: @Model.lecturerID @Html.HiddenFor(m => m.lecturerID)
+            <br />
+            <input id="edit" type="submit" value="save" />
+            <br />
+            @TempData["message"]
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FindCourse</title>
+</head>
+<body>
+    <div>
+        <form action="EditCourseSchedule" method="post">
+            <label>Enter id of course:</label> <input id="courseID" name="courseID" type="text" />
+            <br />
+            <input id="Submit1" type="submit" value="enter" />
+            <br />
+            @Session["message"]
+            @TempData["message"]
+
+        </form>
+
+    </div>
+</body>
+</html>

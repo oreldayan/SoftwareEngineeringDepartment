@@ -1,0 +1,32 @@
+﻿@model WebApplicationNewPro.Models.StudentCoursesTests
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AssigningStudentToCourse</title>
+</head>
+<body>
+    <div>
+        <form action="SubmitAssigningStudentToCourse" method="post">
+            <p>Assign a student who exists for the course</p>
+            Enter name of student: <input id="studentName" name="studentName" type="text" />
+            <br />
+            Enter ID of student: <input id="studentID" name="studentID" type="text" />
+            <br />
+            Enter name of course: <input id="courseName" name="courseName" type="text" />
+            <br />
+            Enter ID of course: <input id="courseID" name="courseID" type="text" />
+            <br />
+            <input id="Submit6" type="submit" value="Assign student to course" />
+            <br />
+            @TempData["messageAssigning"]
+        </form>
+    </div>
+</body>
+</html>

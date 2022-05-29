@@ -1,0 +1,47 @@
+﻿@model WebApplicationNewPro.Models.Course
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCourseToLecturer</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div>
+        <form action="SubmitAddCourseToLecturer" method="post">
+        <h4>הכנס את פרטי הקורס שתרצה להוסיף:</h4>
+        Enter course name:<input id="Text1" name="courseName" type="text" /> @Html.ValidationMessageFor(x => x.courseName)
+        <br />
+        Enter ID course: <input id="Text1" name="courseID" type="text" /> @Html.ValidationMessageFor(x => x.courseID)
+        <br />
+        Enter the class of the course: <input id="Text1" name="placeCourse" type="text" /> @Html.ValidationMessageFor(x => x.placeCourse)
+        <br />
+        Enter the day of the course: <input id="Text1" name="day" type="text" />@Html.ValidationMessageFor(x => x.day)
+        <br />
+        Enter the start time: <input id="Text1" name="beginningTime" type="text" />@Html.ValidationMessageFor(x => x.beginningTime)
+        <br />
+        Enter the date of moed A :<input id="Text1" name="dateMoedA" type="text" />@Html.ValidationMessageFor(x => x.dateMoedA)
+        <br />
+        Enter the date of moed B :<input id="Text1" name="dateMoedB" type="text" />@Html.ValidationMessageFor(x => x.dateMoedB)
+        <br />
+        Enter place moed A: <input id="Text1" name="placeMoedA" type="text" />@Html.ValidationMessageFor(x => x.placeMoedA)
+        <br />
+        Enter place moed B:<input id="Text1" name="placeMoedB" type="text" />@Html.ValidationMessageFor(x => x.placeMoedB)
+        <br />
+        Enter ID lecturer: <input id="Text1" name="lecturerID" type="text" />@Html.ValidationMessageFor(x => x.lecturerID)
+        <br />
+        <input id="Submit1" type="submit" value="Enter" />
+
+        @TempData["addCourse"]
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@using WebApplicationNewPro.Models;
+@model WebApplicationNewPro.Models.Users
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Enter</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+    <div>
+        <p>Welcome</p>
+
+        Username: <input id="Text1" name="Username" type="text" /> @Html.ValidationMessageFor(x => x.Username)
+        <br />
+        Password: <input id="Text1" name="Password" type="text" /> @Html.ValidationMessageFor(x => x.Password)
+        <br />
+        <input id="Submit1" type="submit" value="Log in" />
+        <br />
+        @Session["message"]
+
+
+    </div>
+    }
+</body>
+</html>

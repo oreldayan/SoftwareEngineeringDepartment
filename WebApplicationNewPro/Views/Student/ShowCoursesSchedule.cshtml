@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplicationNewPro.Models.Course>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowCoursesSchedule</title>
+</head>
+<body>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.courseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.placeCourse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.day)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beginningTime)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.lecturerID)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.placeCourse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beginningTime)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.lecturerID)
+            </td>
+
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

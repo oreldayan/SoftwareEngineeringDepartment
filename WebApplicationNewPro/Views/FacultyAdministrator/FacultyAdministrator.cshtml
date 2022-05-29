@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FacultyAdministrator</title>
+</head>
+<body>
+    <div>
+        <h4>בחר את הפעולה שתרצה לעשות:</h4>
+        <form action="AssigningStudentToCourse" method="post">
+            <input id="Submit18" type="submit" value="הקצאת סטודנט לקורס קיים" />
+        </form>
+
+        <br />
+        <form action="FindCourse" method="post">
+            <input id="Submit18" type="submit" value="עריכת לוח הזמנים של קורס " />
+        </form>
+
+        <br />
+        <form action="UpdateGrade" method="post">
+            <input id="Submit18" type="submit" value="עדכון ציון קורס" />
+        </form>
+        <br />
+        <form action="AddCourseToLecturer" method="post">
+            <input id="Submit18" type="submit" value="הוספת קורס חדש למרצה" />
+        </form>
+        @TempData["UpdateGradeMoedA"]
+        @TempData["UpdateGradeMoedA_MoedB"]
+        @TempData["messageAssigning"]
+        @TempData["addCourse"]
+
+    </div>
+</body>
+</html>

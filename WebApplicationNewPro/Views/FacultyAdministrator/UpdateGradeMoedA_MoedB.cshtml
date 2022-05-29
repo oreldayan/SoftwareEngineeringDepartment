@@ -1,0 +1,33 @@
+﻿@model WebApplicationNewPro.Models.StudentCoursesTests
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateGradeMoedA_MoedB</title>
+</head>
+<body>
+    <div>
+        <form action="SubmitUpdateGradeMoedA_MoedB" method="post">
+            student ID : @Model.studentID @Html.HiddenFor(s => s.studentID)
+            <br />
+            course ID: @Model.courseID @Html.HiddenFor(s => s.courseID)
+            <br />
+            course Name: @Model.courseName @Html.HiddenFor(s => s.courseName)
+            <br />
+            student Name: @Model.studentName @Html.HiddenFor(s => s.studentName)
+            <br />
+            grade Moed A: @Html.TextBoxFor(m => m.gradeMoedA)
+            <br />
+            grade Moed B: @Html.TextBoxFor(m => m.gradeMoedB)
+            <br />
+            <input id="Submit1" type="submit" value="submit" />
+        </form>
+    </div>
+</body>
+</html>

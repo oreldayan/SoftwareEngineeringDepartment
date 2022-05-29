@@ -1,0 +1,28 @@
+﻿@model WebApplicationNewPro.Models.StudentCoursesTests
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateGrade</title>
+</head>
+<body>
+    <div>
+        <h4>בחירת הקורס והסטודנט שלו נרצה לעדכן את הציון</h4>
+        <form action="SubmitUpdateGrade" method="post">
+            Enter ID student:<input id="Text1" name="studentID" type="text" />
+            <br />
+            Enter ID course:<input id="Text1" name="courseID" type="text" />
+            <br />
+            <input id="Submit1" type="submit" value="enter" />
+            <br />
+            @TempData["message"]
+        </form>
+    </div>
+</body>
+</html>

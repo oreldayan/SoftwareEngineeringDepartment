@@ -1,0 +1,34 @@
+﻿@model WebApplicationNewPro.Models.Lecturer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lecturer</title>
+</head>
+<body>
+    <div>
+        <form action="ShowSchedule">
+            <input id="Submit4" type="submit" value="הצג לוח זמני קורסים" />
+        </form>
+        <br />
+        <form action="StudentsPerCourse">
+            <input id="Submit5" type="submit" value="הצג את רשימת התלמידים בקורס" />
+        </form>
+        <br />
+        <form action="GradeOfTests">
+            <input id="Submit5" type="submit" value="הצג את רשימת הציונים של התלמידים בקורס התלמידים בקורס" />
+        </form>
+        <br />
+        <form action="EditGradeOfStudent">
+            <input id="Submit5" type="submit" value=" עדכן ציון של תלמיד בקורס שאתה מלמד" />
+        </form>
+        @TempData["UpdateGradeMoedA"]
+    </div>
+</body>
+</html>
